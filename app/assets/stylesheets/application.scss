@@ -11,3 +11,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    -ms-overflow-style: none;  /* Hide scrollbar IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar Firefox */
+    min-height: 100vh;
+    background-color: #FEFFE4;
+}
+
+/* Hide ALL scrollbars */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: radial-gradient(
+    circle at bottom,
+    #ccc,
+    black 60%
+    );
+}

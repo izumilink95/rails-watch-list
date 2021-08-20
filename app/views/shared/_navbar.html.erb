@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <div>
+    <%= link_to lists_path do %>
+      <h1 style="padding:4px 8px;">Movie Lists</h1>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to "Add List", new_list_path, class: "btn btn-secondary", style: "color:white;" %>
+  </div>
+</nav>

@@ -1,12 +1,33 @@
-.navbar-lewagon {
+.navbar {
+  z-index: 1;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 8px 16px;
+  height: 80px;
+  width: 100%;
+  background: transparent;
+  transition: background 0.2s;
+
+  a:first-child,
+  a:first-child:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    margin: 0;
+    color: white;
+  }
+
+  .nav-btn {
+
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-black {
+  background: black;
+  transition: background 0.2s;
 }

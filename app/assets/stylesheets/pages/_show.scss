@@ -1,0 +1,29 @@
+.cards {
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  margin: 16px;
+}
+
+.rating {
+  position: absolute;
+  top: 442px;
+  right: 16px;
+}
+
+.card-quote {
+  margin: 0;
+}
+
+.card-quote span {
+  position: relative;
+  top: 32px;
+  line-height: 16px;
+  font-size: 64px;
+  font-family: 'Space Grotesk', sans-serif;
+}

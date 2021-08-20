@@ -54,3 +54,5 @@ gem 'simple_form'
 
 # Seed faker
 gem 'faker'
+
+gem 'dotenv-rails', groups: [:development, :test]

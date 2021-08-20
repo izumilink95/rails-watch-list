@@ -1,0 +1,11 @@
+<div class="container" style="padding-top:80px;width:50vw;">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <div class="form-group">
+      <%= f.input :comment, input_html: { class: "form-control" } %>
+      <%= f.association :movie, input_html: { class: "form-control" } %>
+      <br>
+      <%= f.submit class: "btn btn-primary", style: "color:white;" %>
+      <%= link_to "Cancel", lists_path, class: "btn btn-danger", style: "color:white;" %>
+    </div>
+  <% end %>
+</div>

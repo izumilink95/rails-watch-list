@@ -1,0 +1,21 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random);">
+  <h2><%= @list.name %></h2>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= bookmark.movie.poster_url %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= bookmark.movie.title %></h5>
+          <div class="rating">
+            <p>&#128420;<%= bookmark.movie.rating %></p>
+          </div>
+          <p class="card-text"><%= bookmark.movie.overview %></p>
+          <p class="card-quote"><span>"</span><%= bookmark.comment %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
