@@ -6,13 +6,15 @@
 }
 
 .card {
+  flex: 0 1 30%;
   position: relative;
   margin: 16px;
+  min-width: 300px;
 }
 
 .rating {
   position: absolute;
-  top: 442px;
+  top: 450px;
   right: 16px;
 }
 
