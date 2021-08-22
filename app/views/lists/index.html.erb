@@ -1,15 +1,31 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random);">
-  <%# <h2 style="text-align:center;">My Movies Lists</h2> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('cinema.jpg') %>');">
+  <h2><span id="banner-typed-text"></span></h2>
 </div>
 
 <div class="container">
   <div class="list-cards">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list) do %>
-        <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <%= list.name %>
-        </div>
+      <% if list.photo.attached? %>
+        <%= link_to list_path(list) do %>
+          <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, crop: :fill %>')">
+            <button type="button" class="btn btn-delete" data-toggle="modal" data-target="#delete-confirm">
+              <i class="fas fa-times"></i>
+            </button>
+            <%= list.name %>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to list_path(list) do %>
+          <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('cinema.jpg') %>')">
+            <button type="button" class="btn btn-delete" data-toggle="modal" data-target="#delete-confirm">
+              <i class="fas fa-times"></i>
+            </button>
+            <%= list.name %>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
 </div>
+
+<%= render "shared/modal" %>

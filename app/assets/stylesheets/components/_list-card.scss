@@ -13,9 +13,11 @@
 }
 
 .list-card {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   height: 180px;
   min-width: 240px;
   max-width: 400px;
@@ -28,4 +30,25 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.list-card:hover .btn-delete {
+  color: white;
+}
+
+.btn-delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  padding: 8px;
+  width: 32px;
+  color: transparent;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+  color: white;
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
 }
