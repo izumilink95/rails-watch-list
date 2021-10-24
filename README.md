@@ -1,5 +1,6 @@
 # Rails Watch List
 An application built in Ruby On Rails as part of the Le Wagon Full Stack Web Development bootcamp. The task was to complete an app for bookmarking films in user-created lists.
+Hosted on: http://mymovieslist-698.herokuapp.com/lists
 
 ## Local Installation
 
