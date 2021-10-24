@@ -1,24 +1,19 @@
-# README
+# Rails Watch List
+An application built in Ruby On Rails as part of the Le Wagon Full Stack Web Development bootcamp. The task was to complete an app for bookmarking films in user-created lists.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Local Installation
 
-Things you may want to cover:
+Rails Watch List was built in Ruby 2.7.3 so please ensure that you are on that version with:
 
-* Ruby version
+``` 
+$ rbenv local 1.9.3-p183
+```
+Then execute:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ bundle install
+$ yarn install
+$ rails db:create db:migrate db:seed
+$ rails s
+```
+You can then find a local server running at: http://localhost:3000
