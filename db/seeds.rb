@@ -10,28 +10,28 @@ require 'open-uri'
 require 'json'
 
 Bookmark.destroy_all
-# Movie.destroy_all
+Movie.destroy_all
 
-# CONFIG = 'http://tmdb.lewagon.com/configuration'
-# TOP = 'http://tmdb.lewagon.com/movie/top_rated'
+CONFIG = 'http://tmdb.lewagon.com/configuration'
+TOP = 'http://tmdb.lewagon.com/movie/top_rated'
 
-# config_json = URI.open(CONFIG).read
-# config_hash = JSON.parse(config_json)
+config_json = URI.open(CONFIG).read
+config_hash = JSON.parse(config_json)
 
-# BASE_URL = config_hash['images']['base_url']
-# POSTER_SIZE = config_hash['images']['poster_sizes'][3]
+BASE_URL = config_hash['images']['base_url']
+POSTER_SIZE = config_hash['images']['poster_sizes'][3]
 
-# top_rated = URI.open(TOP).read
-# top_rated_hash = JSON.parse(top_rated)
+top_rated = URI.open(TOP).read
+top_rated_hash = JSON.parse(top_rated)
 
-# top_rated_hash['results'].each do |movie|
-#   Movie.create(
-#     title: movie['original_title'],
-#     overview: movie['overview'],
-#     poster_url: BASE_URL + POSTER_SIZE + movie['poster_path'],
-#     rating: movie['vote_average']
-#   )
-# end
+top_rated_hash['results'].each do |movie|
+  Movie.create(
+    title: movie['original_title'],
+    overview: movie['overview'],
+    poster_url: BASE_URL + POSTER_SIZE + movie['poster_path'],
+    rating: movie['vote_average']
+  )
+end
 
 List.destroy_all
 
